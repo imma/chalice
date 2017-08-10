@@ -5,6 +5,8 @@ function main {
   source "$shome/script/profile"
 
   block compile virtualenv
+  mkdir -p "$shome/bin"
+  ln -nfs ../vendor/virtualenv/bin/chalice "$shome/bin/"
 }
 
 main "$@"
