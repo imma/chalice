@@ -6,7 +6,7 @@ function _chalice_profile {
   #export ANSIBLE_ROLES_PATH="$shome/roles${ANSIBLE_ROLES_PATH:+:${ANSIBLE_ROLES_PATH}}"
   #export ANSIBLE_LIBRARY="$shome/library${ANSIBLE_LIBRARY:+:${ANSIBLE_LIBRARY}}"
 
-  CHALICE_VERSION='0.0.1'
+  CHALICE_VERSION="$(cat "$shome/.chalice-version.json" | jq -r '.[].version')"
 }
 
 _chalice_profile
