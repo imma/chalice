@@ -4,7 +4,7 @@ function version {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  local ver_chalice="0.0.1"
+  local ver_chalice="$(chalice --version 2>/dev/null | awk '{print $2}' || true)"
   jq -n --arg chalice "$ver_chalice" '{chalice: $chalice}'
 }
 
