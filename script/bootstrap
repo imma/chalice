@@ -7,6 +7,7 @@ function main {
   block compile virtualenv
   mkdir -p "$shome/bin"
   ln -nfs ../vendor/virtualenv/bin/chalice "$shome/bin/"
+  ln -nfs ../vendor/virtualenv/bin/http "$shome/bin/"
 }
 
 main "$@"
