@@ -1,3 +1,4 @@
 /vendor
 /bin/chalice
 /bin/http
+Pipfile.lock
