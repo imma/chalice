@@ -5,7 +5,8 @@ function version {
   source "$shome/script/profile"
 
   local ver_chalice="$(chalice --version 2>/dev/null | awk '{print $2}' || true)"
-  jq -n --arg chalice "$ver_chalice" '{chalice: $chalice}'
+  local ver_httpie="$(http --version 2>/dev/null || true)"
+  jq -n --arg chalice "$ver_chalice" --arg httpie "$ver_httpie" '{chalice: $chalice, httpie: $httpie}'
 }
 
 version "$@"

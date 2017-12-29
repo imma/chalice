@@ -9,6 +9,7 @@ name = "pypi"
 
 chalice = "*"
 httpie = "*"
+http-prompt = "*"
 
 
 [dev-packages]

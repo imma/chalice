@@ -1,6 +1,8 @@
 {
   "require": [],
   "versions": {
-    "chalice": "aws/chalice"
+    "chalice": "aws/chalice",
+    "httpie": "jakubroztocil/httpie",
+    "http_prompt": "eliangcs/http-prompt"
   }
 }
